@@ -8,6 +8,6 @@ while (i <= 9):
             print("{}{}".format(i, j), end="")
             print("")
             break
-        print("{}{}".format(i, j), end=", ")        
+        print("{}{}".format(i, j), end=", ")
         j = j + 1
     i = i + 1
