@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-import sys
-lenOfArgv = (len(sys.argv) - 1)
-index = 1
-if ((lenOfArgv == 0)):
-    print("{} arguments.".format(lenOfArgv))
-else:
-    if (lenOfArgv == 1):
-        print("{} argument:".format(lenOfArgv))
-        print("{}: {}".format(lenOfArgv, sys.argv[lenOfArgv]))
+if __name__ == '__main__':
+    import sys
+    LenOfArgv = (len(sys.argv) - 1)
+    index = 1
+    if LenOfArgv == 0:
+        print("{} arguments.".format(LenOfArgv))
     else:
-        print("{} arguments:". format(lenOfArgv))
-        while (index < (lenOfArgv + 1)):
-            print("{}: {}".format(index, sys.argv[index]))
-            index += 1
+        if LenOfArgv == 1:
+            print("{} argument:".format(LenOfArgv))
+            print("{}: {}".format(LenOfArgv, sys.argv[LenOfArgv]))
+        else:
+            print("{} arguments:".format(LenOfArgv))
+            while (index < (LenOfArgv + 1)):
+                print("{}: {}".format(index, sys.argv[index]))
+                index += 1
