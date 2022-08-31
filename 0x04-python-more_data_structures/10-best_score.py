@@ -1,22 +1,13 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    dict_list = []
-    max_number = 0
     if isinstance(a_dictionary, dict):
+        max_number, position = 0, 0
+        keys_list = list(a_dictionary.keys())
+        val_list = list(a_dictionary.values())
         for value in a_dictionary.values():
             if isinstance(value, int):
-                dict_list.append(value)
-        max_number = max_integer(dict_list)
-        for key, value in a_dictionary.items():
-            if max_number == value:
-                return key
-    else:
-        return None
-def max_integer(my_list=[]):
-    if isinstance(my_list, list):
-        if len(my_list) == 0:
-            return None
-        my_list = sorted(my_list)
-        Len = len(my_list)
-        return my_list[Len - 1]
+                if value > max_number:
+                    max_number = value
+        position = val_list.index(max_number)
+        return keys_list[position]
     return None
