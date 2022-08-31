@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
+    new_list = [row[:] for row in matrix]
     for j in range(len(new_list)):
         for i in range(len(new_list[j])):
             new_list[j][i] = pow(new_list[j][i], 2)
