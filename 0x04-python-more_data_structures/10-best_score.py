@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if isinstance(a_dictionary, dict):
+    if isinstance(a_dictionary, dict) or len(a_dictionary) == 0:
         max_number, position = 0, 0
         keys_list = list(a_dictionary.keys())
         val_list = list(a_dictionary.values())
