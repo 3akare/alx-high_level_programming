@@ -6,22 +6,31 @@ def list_division(my_list_1, my_list_2, list_length):
     while (index < list_length):
         try:
             div = my_l_1[index] / my_list_2[index]
-            new_list.append(div)
             index += 1
         except TypeError:
             print("{}".format("wrong type"))
-            new_list.append(0)
+            div = 0
             index += 1
         except IndexError:
             print("{}".format("out of range"))
-            new_list.append(0)
+            div = 0
             index += 1
         except ZeroDivisionError:
             print("{}".format("division by 0"))
-            new_list.append(0)
+            div = 0
             index += 1
-        except Exception:
-            new_list.append(0)
         finally:
             pass
+        new_list.append(div)
     return (new_list)
+my_l_1 = [10, 8, 4]
+my_l_2 = [2, 4, 4]
+result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
+print(result)
+
+print("--")
+
+my_l_1 = [10, 8, 4, 4]
+my_l_2 = [2, 0, "H", 2, 7]
+result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
+print(result)
