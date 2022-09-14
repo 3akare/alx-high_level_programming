@@ -1,4 +1,4 @@
 #ignore __pycache
 __pycache__/
 #ignore main.py
-main
+0-main.py
