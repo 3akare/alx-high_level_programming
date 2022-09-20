@@ -1,0 +1,19 @@
+#Doctest ../5-text_indentation.py
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("booty")
+booty
+>>> text_indentation(89)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> text_indentation("""Who do you think is the best footabller in the world? Its obviously lionel Messi.""")
+Who do you think is the best footabller in the world?
+<BLANKLINE>
+Its obviously lionel Messi.
+<BLANKLINE>
+>>> text_indentation("""Arsenal is winning the prem. this year, periodt.""")
+Arsenal is winning the prem.
+<BLANKLINE>
+this year, periodt.
+<BLANKLINE>

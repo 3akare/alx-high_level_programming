@@ -1,0 +1,25 @@
+#Doctest for ../0-add_inter.py
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(9, 8)
+17
+>>> add_integer(9.1, 8.1)
+17
+>>> add_integer("string", 8.8)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(9, "string")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+>>> print(add_integer(7, -10))
+-3
+>>> add_integer(0, 230)
+230
+>>> [add_integer(n, n) for n in range(6)]
+[0, 2, 4, 6, 8, 10]
+>>> add_integer('c', 90)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer

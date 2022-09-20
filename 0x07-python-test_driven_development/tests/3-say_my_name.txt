@@ -1,0 +1,15 @@
+#Doctest for ../3-say_my_name.py
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("David", "Bakare")
+My name is David Bakare
+>>> say_my_name(float(23), "Bakare")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+>>> say_my_name("float(23)", 89)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+>>> say_my_name("float(23)", "89")
+My name is float(23) 89
