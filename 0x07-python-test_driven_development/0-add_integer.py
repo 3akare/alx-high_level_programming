@@ -10,7 +10,10 @@ def add_integer(a, b=98):
     """
     add_integer: adds integers and returns the sum
     """
-
+    if (a == float('inf')):
+        raise OverflowError("cannot convert float infinity to integer")
+    if (a == float('NaN')):
+        raise ValueError("cannot convert float NaN to integer")
     if ((not isinstance(a, int)) and (not isinstance(a, float))):
         raise TypeError("a must be an integer")
     if not isinstance(b, int) and not isinstance(b, float):

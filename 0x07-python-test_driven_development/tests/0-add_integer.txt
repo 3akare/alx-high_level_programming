@@ -1,10 +1,22 @@
-#Doctest for ../0-add_inter.py
+#Doctest for ../0-add_interger.py
 
 >>> add_integer = __import__('0-add_integer').add_integer
 >>> add_integer(9, 8)
 17
 >>> add_integer(9.1, 8.1)
 17
+>>> add_integer(float('inf'), 8.1)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(float('NaN'), 8.1)
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+>>> add_integer(, 8.1)
+Traceback (most recent call last):
+    ...
+SyntaxError: invalid syntax
 >>> add_integer("string", 8.8)
 Traceback (most recent call last):
     ...
