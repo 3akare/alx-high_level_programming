@@ -35,3 +35,11 @@ TypeError: b must be an integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+>>> add_integer(,)
+Traceback (most recent call last):
+    ...
+SyntaxError: invalid syntax
+>>> add_integer(,7)
+Traceback (most recent call last):
+    ...
+SyntaxError: invalid syntax

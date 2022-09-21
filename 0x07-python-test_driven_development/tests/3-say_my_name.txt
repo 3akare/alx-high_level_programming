@@ -17,5 +17,9 @@ My name is float(23) 89
 Traceback (most recent call last):
     ...
 SyntaxError: invalid syntax
+>>> say_my_name(,)
+Traceback (most recent call last):
+    ...
+SyntaxError: invalid syntax
 >>> say_my_name("hey")
 My name is hey 
