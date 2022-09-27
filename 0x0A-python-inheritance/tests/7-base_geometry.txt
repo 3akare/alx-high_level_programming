@@ -45,3 +45,5 @@ Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 >>> bg.integer_validator("width", True)
+Traceback (most recent call last):
+TypeError: width must be an integer
