@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-def write_file(filename="",text=""):
-    with open(filename, 'w', encoding='utf-8') as file:
-        nb_characters = file.write(text)
+"""Defines a text file-writing function"""
+
+
+def write_file(filename='', text=''):
+    """Write a text into filename"""
+    with open(filename, 'w', encoding='utf-8') as f:
+        nb_characters = f.write(text)
     return nb_characters
