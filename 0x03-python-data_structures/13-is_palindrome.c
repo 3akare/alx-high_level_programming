@@ -32,6 +32,7 @@ int is_palindrome(listint_t **head)
 			eq++;
 		}
 	}
+	free(int_array);
 	if (eq == len)
 		return (1);
 	return (0);
