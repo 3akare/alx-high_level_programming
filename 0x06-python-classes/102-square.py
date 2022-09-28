@@ -38,7 +38,7 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    """special method for comparing with similar objects"""
+    """special methods for comparing with similar objects"""
 
     def __gt__(self, other):
         """greater than"""
