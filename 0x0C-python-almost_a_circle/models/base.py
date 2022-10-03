@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """Defines a base model class"""
 
-
-class Base:
+class Base():
     """
     Represent the base model for all other classes in project 0x0C*
-    Attibutes:
-        __nb_objects (int): The nunmber of instantiated Bases
+    Attributes:
+        __nb_objects (int): The number of instantiated Bases
     """
 
     __nb_objects = 0
@@ -16,7 +15,7 @@ class Base:
             Initialize a new Base
 
             Args:
-                id(int): the indentity of a new Base
+                id(int): the identity of a new Base
         """
         if (id is not None):
             self.id = id
