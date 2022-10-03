@@ -35,8 +35,8 @@ class Rectangle(Base):
         self.__width = value
 
     @property
-    """set/get the height of the rectangle"""
     def height(self):
+        """set/get the height of the rectangle"""
         return self.__height
 
     @height.setter
@@ -44,8 +44,8 @@ class Rectangle(Base):
         self.__height = value
 
     @property
-    """set/get the x coordinate of the rectangle"""
     def x(self):
+        """set/get the x coordinate of the rectangle"""
         return self.__x
 
     @x.setter
@@ -53,8 +53,8 @@ class Rectangle(Base):
         self.__x = value
 
     @property
-    """set/get the y coordinate of the rectangle"""
     def y(self):
+        """set/get the y coordinate of the rectangle"""
         return self.__y
 
     @y.setter
