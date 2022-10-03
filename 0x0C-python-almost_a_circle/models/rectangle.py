@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a rectangle class"""
 from models.base import Base
+# Base = __import__('base').Base
 
 
 class Rectangle(Base):
@@ -87,11 +88,18 @@ class Rectangle(Base):
         """
             prints to stdout the rectangle instance with the character '#'
         """
+        for k in range(self.y):
+            print('')
         for i in range(self.height):
+            for m in range(self.x):
+                print(' ', end='')
             for j in range(self.width):
                 print('#', end='')
             print('')
 
     def __str__(self):
+        """
+            Overrides the __str__ method
+        """
         text = "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
         return (text.format(self.id, self.x, self.y, self.width, self.height))
