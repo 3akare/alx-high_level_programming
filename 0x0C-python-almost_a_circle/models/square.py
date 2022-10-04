@@ -37,7 +37,7 @@ class Square(Rectangle):
         """
         text = "[Square] ({:d}) {:d}/{:d} - {:d}"
         return (text.format(self.id, self.x, self.y, self.width))
-    
+
     def update(self, *args, **kwargs):
         """
             Update the class square by adding the public method
