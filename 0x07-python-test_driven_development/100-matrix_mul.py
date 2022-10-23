@@ -7,6 +7,15 @@ Function Name: matrix_mul(m_a, m_b)
 
 
 def matrix_mul(m_a, m_b):
+    '''
+    Multiples two matrices
+
+    Args:
+        m_a - first matrix
+        m_b - second matrix
+    Returns:
+        Multiplication of m_a and m_b
+    '''
     if (not isinstance(m_a, list)):
         raise TypeError('m_a must be a list')
     if (not isinstance(m_b, list)):
