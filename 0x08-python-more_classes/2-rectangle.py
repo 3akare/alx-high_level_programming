@@ -57,6 +57,6 @@ class Rectangle:
         '''
             perimeter - returns the perimeter of a rectangle instance
         '''
-        if width or height == 0:
+        if ((width == 0) or (height == 0)):
             return (0)
         return (2 * (self.__width + self.__height))
