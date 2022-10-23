@@ -35,4 +35,36 @@ Traceback (most recent call last):
     ...
 TypeError: m_b should contain only integers or floats
 
+>>> matrix_mul([[0, 9]])
+Traceback (most recent call last):
+    ...
+TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
 
+>>> matrix_mul()
+Traceback (most recent call last):
+    ...
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+>>> matrix_mul([[1, 2, 3], [8, 9, 0]], [[1, 2], [0, 9]])
+Traceback (most recent call last):
+    ...
+ValueError: m_a and m_b can't be multiplied
+
+>>> matrix_mul([[1, 2, 3], [8, 9, 0]], [[1, 2], [0, 9, 8]])
+Traceback (most recent call last):
+    ...
+TypeError: each row of m_b must be of the same size
+
+>>> matrix_mul([[1, 2, 3], [8, 9, 0, 8]], [[1, 2], [0, 9]])
+Traceback (most recent call last):
+    ...
+TypeError: each row of m_a must be of the same size
+
+>>> matrix_mul([0], [9])
+Traceback (most recent call last):
+    ...
+TypeError: m_a must be a list of lists
+>>> matrix_mul([[0]], [9])
+Traceback (most recent call last):
+    ...
+TypeError: m_b must be a list of lists
