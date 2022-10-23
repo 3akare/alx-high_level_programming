@@ -1,8 +1,3 @@
-/*
- * File: 103-python.c
- * Auth: Brennan D Baraban
- */
-
 #include <Python.h>
 
 void print_python_list(PyObject *p);
