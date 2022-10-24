@@ -13,7 +13,7 @@ void print_python_string(PyObject *p)
 
 	if (strcmp(p->ob_type->tp_name, "str") != 0)
 	{
-		printf(" [ERROR] Invalid String Object");
+		printf(" [ERROR] Invalid String Object\n");
 		return;
 	}
 	len = ((PyASCIIObject *)(p))->lenght;
