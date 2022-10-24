@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' Add all agruments to a python list, and then save them to a file'''
+''' Add all arguments to a python list, and then save them to a file'''
 import sys
 
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
