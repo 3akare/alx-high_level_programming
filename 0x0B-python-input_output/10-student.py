@@ -15,7 +15,11 @@ class Student:
         '''
         obj_dict = {}
         if isinstance(attrs, list) and all([type(a) == str for a in attrs]):
-            return {name: value for name, value in self.__dict__.items() if name in attrs}
+            for name, value in self.__dict__.items():
+                if name in attrs:
+                    obj_dict[name] = value
+            return (obj_dict)
+
         if hasattr(self, '__dict__'):
             return self.__dict__.copy()
         return obj_dict

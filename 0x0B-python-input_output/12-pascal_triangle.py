@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 '''Pascal's Triangle'''
 
+
 def pascal_triangle(n):
-    """to make this tri"""
-    tri = []
+    """pascal triangle"""
+    new_list = []
     line = [1]
     y = [0]
     for x in range(max(n, 0)):
-        tri.append(line)
-        line = [l + r for l, r in zip(line + y, y + line)]
-    return tri
+        new_list.append(line)
+        line = [lp + r for lp, r in zip(line + y, y + line)]
+    return new_list
