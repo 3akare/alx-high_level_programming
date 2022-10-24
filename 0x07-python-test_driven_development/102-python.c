@@ -1,7 +1,7 @@
-#include <python.h>
+#include "python.h"
 
 /**
- * print_python_string - Prints informatuion about Python strings
+ * print_python_string - Prints information about Python strings
  * @p: A PyObject string object
  */
 
