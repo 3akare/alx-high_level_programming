@@ -19,7 +19,8 @@ for ln in sys.stdin:
     if (num == 0):
         print(o_put.format(t_size))
         for k, v in s_code.items():
-            print(f'{k}: {v}')
+            if v != 0:
+                print(f'{k}: {v}')
         num = 10
     num -= 1
     ln = [ln.split()]
