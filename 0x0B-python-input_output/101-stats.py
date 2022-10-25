@@ -2,10 +2,10 @@
 '''script that reads stdin line by line and computes metrics'''
 import sys
 
-opt = '''File size: {}'''
-t_s = 0
+o_put = '''File size: {}'''
+t_size = 0
 num = 10
-s_c = {
+s_code = {
     '200': 0,
     '301': 0,
     '400': 0,
@@ -17,11 +17,11 @@ s_c = {
     }
 for ln in sys.stdin:
     if (num == 0):
-        print(opt.format(t_s))
-        for k, v in s_c.items():
+        print(o_put.format(t_size))
+        for k, v in s_code.items():
             print(f'{k}: {v}')
         num = 10
     num -= 1
     ln = [ln.split()]
-    t_s += int(ln[0][-1])
-    s_c[ln[0][-2]] += 1
+    t_size += int(ln[0][-1])
+    s_code[ln[0][-2]] += 1
