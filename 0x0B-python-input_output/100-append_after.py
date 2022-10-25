@@ -8,7 +8,6 @@ def append_after(filename='', search_string='', new_string=''):
 
     with open(filename, 'r', encoding='utf-8') as f:
         string = f.readlines()
-        f.close
 
     num = 0
     list_string = string[:]
@@ -20,4 +19,3 @@ def append_after(filename='', search_string='', new_string=''):
 
     with open(filename, 'w', encoding='utf-8') as f:
         f.writelines(list_string)
-        f.close
