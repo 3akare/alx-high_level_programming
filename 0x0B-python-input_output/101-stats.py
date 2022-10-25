@@ -15,14 +15,21 @@ s_code = {
     '405': 0,
     '500': 0
     }
-for ln in sys.stdin:
-    if (num == 0):
-        print(o_put.format(t_size))
-        for k, v in s_code.items():
-            if v != 0:
-                print(f'{k}: {v}')
-        num = 10
-    num -= 1
-    ln = [ln.split()]
-    t_size += int(ln[0][-1])
-    s_code[ln[0][-2]] += 1
+try:
+    for ln in sys.stdin:
+        if (num == 0):
+            print(o_put.format(t_size))
+            for k, v in s_code.items():
+                if v != 0:
+                    print(f'{k}: {v}')
+            num = 10
+        num -= 1
+        ln = [ln.split()]
+        t_size += int(ln[0][-1])
+        s_code[ln[0][-2]] += 1
+except KeyboardInterrupt:
+    print(o_put.format(t_size))
+    for k, v in s_code.items():
+        if v != 0:
+            print(f'{k}: {v}')
+
