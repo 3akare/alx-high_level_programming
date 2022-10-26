@@ -1,11 +1,17 @@
 #!/usr/bin/python3
-'''script that reads stdin line by line and computes metrics'''
+"""Reads from standard input and computes metrics.
+After every ten lines or the input of a keyboard interruption (CTRL + C),
+prints the following statistics:
+    - Total file size up to that point.
+    - Count of read status codes up to that point.
+"""
+
 if __name__ == '__main__':
     import sys
 
     o_put = '''File size: {}'''
     t_size = 0
-    num = 10
+    num = 0
     s_code = {
         '200': 0,
         '301': 0,
@@ -18,18 +24,33 @@ if __name__ == '__main__':
         }
     try:
         for ln in sys.stdin:
-            if (num == 1):
+            if (num == 10):
                 print(o_put.format(t_size))
                 for k, v in s_code.items():
                     if v != 0:
                         print(f'{k}: {v}')
-                num = 10
-            num -= 1
+                num = 1
+            else:
+                num += 1
+
             ln = [ln.split()]
-            t_size += int(ln[0][-1])
-            s_code[ln[0][-2]] += 1
+            try:
+                t_size += int(ln[0][-1])
+            except (IndexError, ValueError):
+                pass
+
+            try:
+                s_code[ln[0][-2]] += 1
+            except IndexError:
+                pass
+        print(o_put.format(t_size))
+        for k, v in s_code.items():
+            if v != 0:
+                print(f'{k}: {v}')
+
     except KeyboardInterrupt:
         print(o_put.format(t_size))
         for k, v in s_code.items():
             if v != 0:
                 print(f'{k}: {v}')
+        raise
