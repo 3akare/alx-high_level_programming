@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
             try:
                 s_code[ln[0][-2]] += 1
-            except IndexError:
+            except Exception:
                 pass
         print(o_put.format(t_size))
         for k, v in s_code.items():
