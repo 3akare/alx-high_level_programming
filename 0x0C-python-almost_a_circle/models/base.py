@@ -62,3 +62,18 @@ class Base:
             else:
                 list_dicts = [o.to_dictionary() for o in list_objs]
                 f.write(Base.to_json_string(list_dicts))
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''loads an instance'''
+
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if cls is Rectangle:
+            new = Rectangle(1, 1)
+        elif cls is Square:
+            new = Square(1)
+        else:
+            new = None
+        new.update(**dictionary)
+        return (new)
