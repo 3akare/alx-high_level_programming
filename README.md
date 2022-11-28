@@ -14,4 +14,5 @@ This repository contains programs written for the higher-level programming track
 - [0x0B-Python-Input/Output](./0x0B-python-input_output)
 - [0x0C-Python-Almost A Circle](./0x0C-python-almost_a_circle)
 - [0x0D-SQL-Introduction](./0x0D-SQL_introduction)
-- [0x0D-SQL-More Queries](./0x0E-SQL_more_queries)
+- [0x0E-SQL-More Queries](./0x0E-SQL_more_queries)
+- [0x12-Javascript Warm Up](./0x12-javascript-warm_up/)
