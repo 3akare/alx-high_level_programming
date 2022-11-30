@@ -6,4 +6,5 @@ function indexFunc (num) {
   return (num * list.indexOf(num));
 }
 
+console.log(list);
 console.log(newList);
