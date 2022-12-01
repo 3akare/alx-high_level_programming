@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const dict = require('./100-data').dict;
+const dict = require('./101-data.js').dict;
 const dictList = Object.values(dict);
 const newDict = {};
 dictList.forEach(element => {
