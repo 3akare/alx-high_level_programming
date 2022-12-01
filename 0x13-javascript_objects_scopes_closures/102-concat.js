@@ -1,19 +1,14 @@
 #!/usr/bin/node
 
 const fs = require('fs');
-let string;
 
-fs.readFile(process.argv[2], (err, data) => {
-  if (err) throw err;
-  string += data.toString();
+fs.readFile(process.argv[2], 'utf8', (err, data1) => {
+  if (err) { console.error(err); }
+  fs.readFile(process.argv[3], 'utf8', (err, data2) => {
+    if (err) { console.error(err); }
+    const data3 = `${data1.slice(0, -1)}\n${data2.slice(0, -1)}\n`;
+    fs.writeFile(process.argv[4], data3, (err) => {
+      if (err) throw err;
+    });
+  });
 });
-
-console.log(string);
-// fs.readFile("./main.js", (err, data) =>{
-//     if (err) throw err;
-//     console.log(data.toString());
-// })
-
-// fs.writeFile('new.txt', "content", err=>{
-//     if (err) throw err;
-// })
