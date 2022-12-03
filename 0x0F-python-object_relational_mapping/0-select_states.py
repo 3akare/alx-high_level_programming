@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 if __name__ == '__main__':
     import MySQLdb
-    ''' import MySQLdb to connect with a MySQL database with python '''
+    import sys
 
     conn = MySQLdb.connect(
-        host="localhost",
+        user=sys.argv[1],
+        password=sys.argv[2],
+        db=sys.argv[3],
         port=3306,
-        user="root",
-        passwd="root",
-        db="hbtn_0e_0_usa",
-        charset="utf8")
+        host='localhost'
+        )
 
     cur = conn.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
