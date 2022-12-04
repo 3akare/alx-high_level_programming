@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-''' Lists all states with a name starting with N (upper N)
- from the database hbtn_0e_0_usa '''
+''' Takes in an argument and displays all values in the
+states table of hbtn_0e_0_usa where name matches the argument '''
 
 
 if __name__ == '__main__':
@@ -16,11 +16,13 @@ if __name__ == '__main__':
         )
 
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute(
+        '''
+        SELECT * FROM states WHERE name='{}' ORDER BY id ASC
+        '''.format(sys.argv[4]))
 
     query_rows = cur.fetchall()
     for row in query_rows:
-        if (row[1][0] == 'N'):
-            print(row)
+        print(row)
     cur.close()
     conn.close()
