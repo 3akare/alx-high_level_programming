@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     status = 0
     states = session.query(State).filter(State.name == sys.argv[4])
     for state in states:
