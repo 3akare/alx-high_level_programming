@@ -20,7 +20,7 @@ if __name__ == '__main__':
     try:
         cur.execute(
             '''
-            SELECT * FROM states WHERE name='{}' ORDER BY id ASC
+            SELECT * FROM states WHERE BINARY name='{}' ORDER BY id ASC
             '''.format(sys.argv[4]))
         query_rows = cur.fetchall()
         [print(row) for row in query_rows]
