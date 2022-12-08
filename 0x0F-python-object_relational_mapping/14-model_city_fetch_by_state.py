@@ -3,7 +3,7 @@
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_city import model_city
+from model_city import City, State
 
 if __name__ == '__main__':
     URL = 'mysql+mysqldb://{}:{}@localhost/{}'
@@ -12,5 +12,7 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
+    for city in session.query(City).order_by(City.id):
+        print("{}: ({}) {}".format(session.query(State).get(city.state_id).name, city.id, city.name))
 
     
