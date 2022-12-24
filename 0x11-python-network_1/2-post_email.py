@@ -18,3 +18,5 @@ if __name__ == '__main__':
             print(response.read().decode('utf-8'))
     except Exception:
         pass
+
+# Usage: ./2* URL 'email-content'
