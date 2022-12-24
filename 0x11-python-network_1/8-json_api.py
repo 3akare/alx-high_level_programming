@@ -15,6 +15,6 @@ if __name__ == '__main__':
                 if response == {}:
                     print('No result')
                 else:
-                    print(f'[{response.get('id')}], {response.get('name')}')
+                    print(f'[{response.get("id")}], {response.get("name")}')
     except IndexError:
         print('Not a valid JSON')
