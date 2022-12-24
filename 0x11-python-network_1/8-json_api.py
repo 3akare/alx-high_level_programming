@@ -6,14 +6,14 @@ import sys
 import requests
 
 if __name__ == '__main__':
+    letter = "" if len(sys.argv[1]) == 1 else sys.argv[1]
+    data = {'q': letter}
     try:
-        letter = "" if len(sys.argv[1]) == 1 else sys.argv[1]
-        data = {'q': letter}
         with requests.post('http://0.0.0.0:5000/search_user', data) as req:
-            response = req.json
+            response = req.json()
             if response == {}:
                 print('No result')
             else:
                 print(f'[{response.get("id")}], {response.get("name")}')
-    except IndexError:
+    except ValueError:
         print('Not a valid JSON')
