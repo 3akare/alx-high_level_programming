@@ -8,7 +8,7 @@ import requests
 if __name__ == '__main__':
     try:
         letter = "" if len(sys.argv[1]) == 1 else sys.argv[1]
-        data = {'q', letter}
+        data = {'q': letter}
         with requests.post('http://0.0.0.0:5000/search_user', data) as req:
             try:
                 response = r.json
