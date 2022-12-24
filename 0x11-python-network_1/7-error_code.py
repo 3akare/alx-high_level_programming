@@ -7,4 +7,7 @@ import sys
 
 if __name__ == '__main__':
     with requests.get(sys.argv[1]) as req:
-        print(req.status_code)
+        if req.status_code >= 400:
+            print(req.status_code)
+        else:
+            print(req.content[2:-1])
