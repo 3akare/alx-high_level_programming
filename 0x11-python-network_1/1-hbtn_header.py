@@ -13,11 +13,3 @@ try:
                 print(i[1])
 except Exception:
     pass
-
-
-# Solution with request module
-# import requests
-# import sys
-
-# with requests.get(sys.argv[1]) as req:
-#     print(req.headers.get('X-Request-Id'))
