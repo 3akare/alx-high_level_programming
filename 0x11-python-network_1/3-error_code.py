@@ -14,4 +14,3 @@ if __name__ == '__main__':
     except urllib.error.HTTPError as e:
         print(f'Error code: {e.code}')
 # Usage: ./3* URL
-# Usage: ./3* URL
