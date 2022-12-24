@@ -7,10 +7,14 @@ import requests
 
 if __name__ == '__main__':
     try:
-        data = {'q', sys.argv[1]}
+        letter = "" if len(sys.argv[1]) == 1 else sys.argv[1]
+        data = {'q', letter}
         with requests.post('http://0.0.0.0:5000/search_user', data) as req:
             try:
                 response = r.json
-                print(f'[{response.get('id')}], {response.get('name')}')
+                if response == {}:
+                    print('No result')
+                else:
+                    print(f'[{response.get('id')}], {response.get('name')}')
     except IndexError:
-        print('No result')
+        print('Not a valid JSON')
