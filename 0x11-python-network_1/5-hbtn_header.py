@@ -6,5 +6,6 @@ of the variable 'X-Request-Id' in the response header'''
 import requests
 import sys
 
-with requests.get(sys.argv[1]) as req:
-    print(req.headers.get('X-Request-Id'))
+if __name__ == '__main__':
+    with requests.get(sys.argv[1]) as req:
+        print(req.headers.get('X-Request-Id'))
