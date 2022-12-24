@@ -7,10 +7,13 @@ import sys
 import requests
 
 if __name__ == '__main__':
-    URL = 'https://api.github.com/repos/{}/{}/commits'
-    with requests.get(URL.format(sys.argv[1], sys.argv[2])) as response:
+    URL = f'https://api.github.com/repos/{sys.argv[1]}/{sys.argv[2]}/commits'
+    with requests.get(URL) as response:
         req = response.json()
-        for i in range(0, 10):
-            name = req[i].get('sha')
-            sha = req[i].get('commit').get('author').get('name')
-            print('{}: {}'.format(name, sha))
+        try:
+            for i in range(0, 10):
+                name = req[i].get('sha')
+                sha = req[i].get('commit').get('author').get('name')
+                print('{}: {}'.format(name, sha))
+        except Exception:
+            pass
