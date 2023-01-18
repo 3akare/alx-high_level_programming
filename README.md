@@ -20,3 +20,4 @@ This repository contains programs written for the higher-level programming track
 - [0x0F-Object Relational Mapping](./0x0F-python-object_relational_mapping)
 - [0x12-Javascript-Warm Up](./0x12-javascript-warm_up/)
 - [0x13-Javascript-Objects Scopes and Closures](./0x13-javascript_objects_scopes_closures)
+- [0x14-Javascript-Web Scraping](./0x14-javascript-web_scraping)
